@@ -1,10 +1,10 @@
 import React from "react"
-import WakeUp from "./components/wake_up.tsx"
+import Alarm from "./components/alarm/alarm.tsx"
 
 const App = () => {
     return (
         <div className="container">
-            <WakeUp/>
+            <Alarm/>
         </div>
     )
 }

@@ -1,0 +1,36 @@
+/* Targeting the #wakeUpAlarm div by id */
+#sleepTime {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Styling the #wakeUpAlarmInput div */
+  #sleepTimeInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e0e0e0; /* Slightly darker gray */
+    border-radius: 5px;
+  }
+  
+  /* Styling the .timeInput class elements */
+  .timeInput {
+    margin-bottom: 15px; /* Adds space between inputs */
+  }
+  
+  /* For TextField components */
+  .timeInput input {
+    width: 100px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Optionally, you can style the Select component (if using Material-UI or similar) */
+  .selectInput {
+    width: 120px;
+    margin-right: 10px;
+  }
+  

@@ -1,17 +1,15 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
+import './sleep_time.css'
 
-interface WakeUpProps {}
+interface SleepTimeProps {}
 
-const WakeUp: React.FC<WakeUpProps> = ({}) => {
-  const [hours, setHours] = React.useState<number>(0);
+const SleepTime: React.FC<SleepTimeProps> = ({}) => {
+  const [hours, setHours] = React.useState<number>(8);
   const [minutes, setMinutes] = React.useState<number>(0);
-  const [isPriorSunrise, setIsPriorSunrise] = React.useState<boolean>(true);
 
   const changeHours = (newHours) => {
-    if (0 <= newHours && newHours <= 2) {
+    if (6 <= newHours && newHours <= 10) {
       setHours(Math.floor(newHours));
     }
   };
@@ -23,16 +21,11 @@ const WakeUp: React.FC<WakeUpProps> = ({}) => {
   };
 
   return (
-    <div>
-      Alarm Time Relative to Sunrise
-      <div>
-        <div>
-          <Select value={isPriorSunrise}>
-            <MenuItem value={1}>-</MenuItem>
-            <MenuItem value={0}>+</MenuItem>
-          </Select>
-        </div>
-        <div>
+    <div id="sleepTime">
+      Sleep Time:
+      <div id="sleepTimeInput">
+        <div></div>
+        <div className="timeInput">
           Hours:
           <TextField
             label="Number"
@@ -41,7 +34,7 @@ const WakeUp: React.FC<WakeUpProps> = ({}) => {
             onChange={(event) => changeHours(event.target.value)}
           />
         </div>
-        <div>
+        <div className="timeInput">
           Minutes:
           <TextField
             label="Number"
@@ -55,4 +48,4 @@ const WakeUp: React.FC<WakeUpProps> = ({}) => {
   );
 };
 
-export default WakeUp;
+export default SleepTime;
